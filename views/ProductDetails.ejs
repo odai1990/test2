@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <%data.map(ele=>{%>
+            <div>
+                <img src="<%=ele.image_link%>" alt="" srcset="">
+                <p><%=ele.name%></p>
+                <p><%=ele.price%></p>
+                <p><%=ele.description%></p>
+                <form action="/update/<%=ele.id%>?_method=put" method="POST">
+                    <input type="text" name="name" id="name" value="<%=ele.name%>">
+                    <input type="text" name="image_link" id="image_link" value="<%=ele.image_link%>">
+                    <input type="text" name="price" id="price" value="<%=ele.price%>">
+                    <input type="text" name="description" id="description" value="<%=ele.description%>">
+                    <input type="submit" value="Update">
+                </form>
+                <form action="/delete/<%=ele.id%>?_method=delete" method="POST">
+                    
+                    <input type="submit" value="Delete">
+                </form>
+            </div>
+            
+            <%});%>
+    </main>
+</body>
+</html>
