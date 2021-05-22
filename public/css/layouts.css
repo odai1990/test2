@@ -1,0 +1,14 @@
+body{
+    display: grid;
+    grid-template-rows: 30vh 50vh 20vh;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header{
+    display: grid;
+    grid-template-rows: 20vh 10vh;
+}
+

@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/five-97-789300.png" type="image/gif" sizes="16x16"> -->
     <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+    <%- include('header'); -%>
     <main>
         <%data.map(ele=>{%>
             <div>
+                <p class='v1'></p>
+                <div class="div">
                 <img src="<%=ele.image_link%>" alt="" srcset="">
                 <h3><%=ele.name%></h3>
                 <p><%=ele.price%></p>
                 <p><%=ele.description%></p>
             </div>
+            </div>
             
             <%});%>
     </main>
-    
+    <%- include('footer'); -%>
 </body>
 </html>

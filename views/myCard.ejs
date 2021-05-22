@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="icon" href="https://cdn.iconscout.com/icon/premium/png-256-thumb/five-97-789300.png" type="image/gif" sizes="16x16"> -->
     <title>MyCard</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
    
-
+    <%- include('header'); -%>
 
         <main>
             <% if(data.length > 0){ %>
                 <%data.map(ele=>{%>
                     <div>
+                        <p class='v1'></p>
+                        <div class="div">
                         <img src="<%=ele.image_link%>" alt="" srcset="">
                         <h3><%=ele.name%></h3>
                         <p><%=ele.price%></p>
@@ -24,6 +27,7 @@
                             <input type="submit" value="View Detials">
                         </form>
                     </div>
+                    </div>
                     
                     <%});%>
             <% } else{ %>  
@@ -31,6 +35,6 @@
             <% } %>
            
         </main>
-   
+        <%- include('footer'); -%>
 </body>
 </html>
