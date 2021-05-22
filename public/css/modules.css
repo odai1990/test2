@@ -4,19 +4,20 @@ main .div
        
 
     margin: 2%;
-    text-align: center;
+
     padding: 1%;
     /* background-image: linear-gradient(90deg, white 3%, transparent 0%); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
         overflow: hidden;
 }
 main .div img
 {
    
     width: 50%;
-    align-self: center;
+   
 }
 main > div
 
@@ -43,10 +44,9 @@ main > div > p
 }
 main
 {
-   
-    height: 100%;
+
     display: flex;
-    width: 100vw;
+
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
