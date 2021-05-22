@@ -21,7 +21,7 @@ const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: 
 
 
 
-app.get('/', homePage);
+app.get('*', homePage);
 app.get('/productByPrice', productByPrice);
 app.get('/mybillienProduct', mybillienProduct);
 app.post('/addToDatabase', addToDatabase);
