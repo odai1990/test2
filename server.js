@@ -10,7 +10,7 @@ const pg = require('pg');
 const superagent = require('superagent');
 
 
-app.use(cors());
+// app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static('./public'));
