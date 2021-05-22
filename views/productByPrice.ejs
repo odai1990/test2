@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>productByPrice</title>
+    <title>Document</title>
 </head>
 <body>
+    <main>
+        <%data.map(ele=>{%>
+            <div>
+                <img src="<%=ele.image_link%>" alt="" srcset="">
+                <h3><%=ele.name%></h3>
+                <p><%=ele.price%></p>
+                <p><%=ele.description%></p>
+            </div>
+            
+            <%});%>
+    </main>
     
-
-<main>
-    <%data.map(ele=>{%>
-        <div>
-            <img src="<%=ele.image_link%>" alt="" srcset="">
-            <p><%=ele.name%></p>
-            <p><%=ele.price%></p>
-            <p><%=ele.description%></p>
-        </div>
-        
-        <%});%>
-</main>
-
 </body>
 </html>

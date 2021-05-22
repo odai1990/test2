@@ -1,29 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mybillien Product</title>
 </head>
 <body>
     <main>
         <%data.map(ele=>{%>
             <div>
                 <img src="<%=ele.image_link%>" alt="" srcset="">
-                <p><%=ele.name%></p>
+                <h3><%=ele.name%></h3>
                 <p><%=ele.price%></p>
                 <p><%=ele.description%></p>
-                <form action="/myProduct" method="post">
-                    <input type="hidden" name="name" id="name" value="<%=ele.name%>">
+                <form action="\addToDatabase" method="post">
                     <input type="hidden" name="image_link" id="image_link" value="<%=ele.image_link%>">
+                    <input type="hidden" name="name" id="name" value="<%=ele.name%>">
                     <input type="hidden" name="price" id="price" value="<%=ele.price%>">
                     <input type="hidden" name="description" id="description" value="<%=ele.description%>">
-                    <input type="submit" value="ADD To Card">
+                    <input type="submit" value="Add To Card">
                 </form>
             </div>
             
             <%});%>
     </main>
+    
 </body>
 </html>

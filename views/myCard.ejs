@@ -7,27 +7,29 @@
     <title>MyCard</title>
 </head>
 <body>
-    <main>
+   
 
-        <% if(data.length > 0){ %>
-            <%data.map(ele=>{%>
-                <div>
-                    <img src="<%=ele.image_link%>" alt="" srcset="">
-                    <p><%=ele.name%></p>
-                    <p><%=ele.price%></p>
-                   
-                    <form action="/productDetails/<%=ele.id%>" method="get">
-                        
-                        <input type="submit" value="View Detials">
-                    </form>
-                </div>
-                
-                <%});%>
-        <% } else{ %>  
-            <p>no photos uploaded</p>
-        <% } %>
 
-      
-    </main>
+        <main>
+            <% if(data.length > 0){ %>
+                <%data.map(ele=>{%>
+                    <div>
+                        <img src="<%=ele.image_link%>" alt="" srcset="">
+                        <h3><%=ele.name%></h3>
+                        <p><%=ele.price%></p>
+                      
+                        <form action="\productDetials\<%=ele.id%>" method="get">
+                         
+                            <input type="submit" value="View Detials">
+                        </form>
+                    </div>
+                    
+                    <%});%>
+            <% } else{ %>  
+                <p>no Product uploaded</p>
+            <% } %>
+           
+        </main>
+   
 </body>
 </html>
