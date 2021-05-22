@@ -2,7 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT | 3000;
+const PORT = process.env.PORT || 3000;
 const cors = require('cors');
 const ejs = require('ejs');
 const methodOverride = require('method-override');
@@ -21,7 +21,7 @@ const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: 
 
 
 
-app.get('/', homePage);
+app.get('*', homePage);
 app.get('/productByPrice', productByPrice);
 app.get('/mybillienProduct', mybillienProduct);
 app.post('/addToDatabase', addToDatabase);
