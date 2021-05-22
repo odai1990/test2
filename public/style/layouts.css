@@ -1,0 +1,30 @@
+body{
+    display: grid;
+    grid-template-rows: 30vh 100% 20vh;
+}
+
+
+main{
+    display: flex;
+    grid-row: 2/3;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+
+footer{
+    grid-row: 3/3;
+    background-color: brown;
+}
+header{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    grid-row: 1/2;
+}
+
+input[type=submit]
+{
+    height: 34px;
+    background-color: orange;
+    border: 0;
+}
